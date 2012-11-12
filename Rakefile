@@ -11,7 +11,7 @@ task :serve do
 end
 
 task :setup do
-  `git branch -m source`
+  `git branch -m master source`
   `git push -u origin source`
   url = `git config --get remote.origin.url`.chomp
   `git clone #{url} output`
